@@ -14,16 +14,16 @@ import androidx.navigation.navArgument
 import com.main.noteapp.feature_note.presentation.add_edit_note.AddEditNoteScreen
 import com.main.noteapp.feature_note.presentation.notes.NotesScreen
 import com.main.noteapp.feature_note.presentation.util.Screen
-import com.main.noteapp.ui.theme.CleanArchitectureNoteAppTheme
+import com.main.noteapp.ui.theme.ComposeCookBookTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+class NoteActivity : ComponentActivity() {
     @ExperimentalAnimationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CleanArchitectureNoteAppTheme {
+            ComposeCookBookTheme() {
                 Surface(
                     color = MaterialTheme.colors.background
                 ) {

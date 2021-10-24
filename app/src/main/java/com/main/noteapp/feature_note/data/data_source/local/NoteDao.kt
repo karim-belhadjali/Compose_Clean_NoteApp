@@ -1,4 +1,4 @@
-package com.main.noteapp.feature_note.data.data_source
+package com.main.noteapp.feature_note.data.data_source.local
 
 import androidx.room.*
 import com.main.noteapp.feature_note.domain.model.Note

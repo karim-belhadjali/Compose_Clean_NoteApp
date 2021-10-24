@@ -42,7 +42,7 @@ class AddEditNoteViewModel @Inject constructor(
             if(noteId != -1) {
                 viewModelScope.launch {
                     noteUseCases.getNote(noteId)?.also { note ->
-                        currentNoteId = note.id
+                        currentNoteId = note.id.toInt()
                         _noteTitle.value = noteTitle.value.copy(
                             text = note.title,
                             isHintVisible = false
@@ -51,7 +51,7 @@ class AddEditNoteViewModel @Inject constructor(
                             text = note.content,
                             isHintVisible = false
                         )
-                        _noteColor.value = note.color
+                        _noteColor.value = note.color.toInt()
                     }
                 }
             }
@@ -91,9 +91,10 @@ class AddEditNoteViewModel @Inject constructor(
                             Note(
                                 title = noteTitle.value.text,
                                 content = noteContent.value.text,
-                                timestamp = System.currentTimeMillis(),
-                                color = noteColor.value,
-                                id = currentNoteId
+                                date = System.currentTimeMillis(),
+                                color = noteColor.value.toString(),
+                                id = currentNoteId.toString(),
+                                owners = listOf()
                             )
                         )
                         _eventFlow.emit(UiEvent.SaveNote)
@@ -112,5 +113,6 @@ class AddEditNoteViewModel @Inject constructor(
     sealed class UiEvent {
         data class ShowSnackbar(val message: String): UiEvent()
         object SaveNote: UiEvent()
+
     }
 }
