@@ -158,55 +158,51 @@ fun ComposeCookBookTheme(
 
 // dark palettes
 private val DarkGreenColorPalette = darkColors(
-    primary = green200,
+    primary = green500,
     primaryVariant = green700,
     secondary = teal200,
-    background = Color.Black,
-    surface = Color.Black,
-    onPrimary = Color.Black,
-    onSecondary = Color.White,
-    onBackground = Color.White,
-    onSurface = Color.White,
-    error = Color.Red,
+    background = Color.White,
+    surface = Color.White,
+    onPrimary = Color.White,
+    onSecondary = Color.Black,
+    onBackground = Color.Black,
+    onSurface = Color.Black
 )
 
 private val DarkPurpleColorPalette = darkColors(
-    primary = purple200,
+    primary = purple,
     primaryVariant = purple700,
     secondary = teal200,
-    background = Color.Black,
-    surface = Color.Black,
-    onPrimary = Color.Black,
-    onSecondary = Color.White,
-    onBackground = Color.White,
-    onSurface = Color.White,
-    error = Color.Red,
+    background = Color.White,
+    surface = Color.White,
+    onPrimary = Color.White,
+    onSecondary = Color.Black,
+    onBackground = Color.Black,
+    onSurface = Color.Black
 )
 
 private val DarkBlueColorPalette = darkColors(
-    primary = blue200,
+    primary = blue500,
     primaryVariant = blue700,
     secondary = teal200,
-    background = Color.Black,
-    surface = Color.Black,
-    onPrimary = Color.Black,
-    onSecondary = Color.White,
-    onBackground = Color.White,
-    onSurface = Color.White,
-    error = Color.Red,
+    background = Color.White,
+    surface = Color.White,
+    onPrimary = Color.White,
+    onSecondary = Color.Black,
+    onBackground = Color.Black,
+    onSurface = Color.Black
 )
 
 private val DarkOrangeColorPalette = darkColors(
-    primary = orange200,
+    primary = orange500,
     primaryVariant = orange700,
     secondary = teal200,
-    background = Color.Black,
-    surface = Color.Black,
-    onPrimary = Color.Black,
-    onSecondary = Color.White,
-    onBackground = Color.White,
-    onSurface = Color.White,
-    error = Color.Red,
+    background = Color.White,
+    surface = Color.White,
+    onPrimary = Color.White,
+    onSecondary = Color.Black,
+    onBackground = Color.Black,
+    onSurface = Color.Black
 )
 
 // Light pallets
@@ -264,7 +260,7 @@ enum class ColorPallet {
 
 @Composable
 fun ComposeCookBookTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = false,
     colorPallet: ColorPallet = ColorPallet.GREEN,
     content: @Composable () -> Unit,
 ) {

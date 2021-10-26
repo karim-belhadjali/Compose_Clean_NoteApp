@@ -19,7 +19,7 @@ import androidx.navigation.NavController
 import com.main.noteapp.feature_note.domain.model.Note
 import com.main.noteapp.feature_note.presentation.notes.components.NoteItem
 import com.main.noteapp.feature_note.presentation.notes.components.OrderSection
-import com.main.noteapp.feature_note.presentation.util.Screen
+import com.main.noteapp.utils.Screen
 import kotlinx.coroutines.launch
 @ExperimentalAnimationApi
 @Composable

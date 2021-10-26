@@ -17,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
+        /*setContent {
             ComposeCookBookTheme() {
                 Surface(
                     color = MaterialTheme.colors.background
@@ -33,6 +33,6 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
             }
-        }
+        }*/
     }
 }

@@ -11,9 +11,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.main.noteapp.feature_login.presentation.RegistrationScreen
+import com.main.noteapp.feature_login.presentation.login.Login
 import com.main.noteapp.feature_note.presentation.add_edit_note.AddEditNoteScreen
 import com.main.noteapp.feature_note.presentation.notes.NotesScreen
-import com.main.noteapp.feature_note.presentation.util.Screen
+import com.main.noteapp.utils.Screen
 import com.main.noteapp.ui.theme.ComposeCookBookTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,10 +32,16 @@ class NoteActivity : ComponentActivity() {
                     val navController = rememberNavController()
                     NavHost(
                         navController = navController,
-                        startDestination = Screen.NotesScreen.route
+                        startDestination = Screen.LoginScreen.route
                     ) {
                         composable(route = Screen.NotesScreen.route) {
                             NotesScreen(navController = navController)
+                        }
+                        composable(route = Screen.RegisterScreen.route) {
+                            RegistrationScreen(navController = navController)
+                        }
+                        composable(route = Screen.LoginScreen.route) {
+                            Login(navController = navController)
                         }
                         composable(
                             route = Screen.AddEditNoteScreen.route + "?noteID={noteId}&noteColor={noteColor}",
